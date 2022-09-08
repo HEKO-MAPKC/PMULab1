@@ -19,7 +19,7 @@ public class ExampleUnitTest {
     }
     @Test
     public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+        assertEquals(4, 2 + 3);
     }
     /*public void Cypher_correct() {
         Cipher AES = new Cipher ();
