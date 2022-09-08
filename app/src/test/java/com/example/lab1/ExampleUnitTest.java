@@ -1,7 +1,7 @@
 package com.example.lab1;
 
 import static org.junit.Assert.assertEquals;
-
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
@@ -11,30 +11,24 @@ import org.junit.Test;
  */
 
 public class ExampleUnitTest {
-    public class MinNum{
-
-    }
-    public class MaxNum{
-
-    }
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 3);
     }
-    /*public void Cypher_correct() {
-        Cipher AES = new Cipher ();
-        for (int i = 0; i < 10; i++) {
-            AES.secret = "Hello" + i;
-            assertEquals(message:"Encode", AES.decrypt(AES.encrypt(strToEncrypt:"password")),actual:
-            "password");
-        }
+    @Test
+    public void addition_isCorrect() throws Exception {
+        Mfunc methods = new Mfunc();
+        //MainActivity m = new MainActivity();
+        assertEquals(methods.min(2,3),2);
+        assertEquals(methods.min(-1,1),-1);
+        assertEquals(methods.min(6,3),3);
+        assertEquals(methods.min(100,0),0);
+
+        assertEquals(methods.max(-1,3),3);
+        assertEquals(methods.max(100,3),100);
+        assertEquals(methods.max(-5,0),0);
+        assertEquals(methods.max(-3,3),3);
+
+
     }
-    @Test public void Cypher_MD5_correct1() {
-        assertEquals(message:"Encodel", Cypher.md5(s:"Hel"),actual:
-        "6b6e667a40e816c4da7bb4ab64cbb82b");
-        assertEquals(message:"Encodel", Cypher.md5(:: "Hello"),acual:
-        "8bla9953c4611296a827abf8c47804d7");
-        assertEquals(message:"Encodel", Cypher.md5(s:"Hello world"),actual:
-        "3e25960a79dbc69b674cd4ec67a72c62");
-    }*/
 }
